@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Set working directory ke folder project
-$projectDir = __DIR__; // folder deploy.php berada
+$projectDir = __DIR__;
 chdir($projectDir);
 
 $commitMessage = "Deploy via PHP script at " . date('Y-m-d H:i:s');
