@@ -7,5 +7,6 @@
 </head>
 <body>
     <h3>Hello, World! AKu cavel</h3>
+    <p>This is a simple paragraph.</p>
 </body>
 </html>
