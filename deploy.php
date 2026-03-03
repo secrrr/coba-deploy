@@ -13,10 +13,11 @@ chdir($projectDir);
 $commitMessage = "Deploy via PHP script at " . date('Y-m-d H:i:s');
 $commitMessageEscaped = escapeshellarg($commitMessage); // ini penting!
 
+$currentBranch = trim(shell_exec("git rev-parse --abrev-ref HEAD"));
 $commands = [
     "git add .",
     "git commit -m $commitMessageEscaped",
-    "git push origin main"
+    "git push origin $currentBranch"
 ];
 
 $output = [];
